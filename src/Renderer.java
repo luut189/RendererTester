@@ -12,7 +12,6 @@ public class Renderer extends JPanel {
     public int pixels[];
 
     public int xScroll = 0;
-    public int yScroll = 0;
 
     public Renderer(int width, int height) {
         this.width = width/size*size;
@@ -45,6 +44,7 @@ public class Renderer extends JPanel {
 
     @Override
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
         int x = 0;
         int y = 0;
         for(int i = xScroll; i < pixels.length; i++) {

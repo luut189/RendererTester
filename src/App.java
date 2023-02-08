@@ -31,19 +31,11 @@ public class App implements Runnable {
         while(true) {
             startTime = System.currentTimeMillis();
 
-            if(render.xScroll <= render.pixels.length) {
+            if(render.xScroll < render.pixels.length) {
                 render.xScroll++;
                 render.repaint();
             } else {
                 render.xScroll = 0;
-                render.repaint();
-            }
-
-            if(render.yScroll < render.pixels.length) {
-                render.yScroll++;
-                render.repaint();
-            } else {
-                render.yScroll = 0;
                 render.repaint();
             }
 
